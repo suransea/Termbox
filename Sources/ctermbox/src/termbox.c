@@ -81,7 +81,7 @@ int tb_init_fd(int inout_)
 		return TB_EFAILED_TO_OPEN_TTY;
 	}
 
-	if (init_term() < 0) {
+	if (init_term_builtin() < 0) {
 		close(inout);
 		return TB_EUNSUPPORTED_TERMINAL;
 	}
